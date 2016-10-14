@@ -1,12 +1,10 @@
 import random
 
-d = float(input("How many dice? "))
-n = float(input("How many sides on said dice? "))
 
 
 def roll_one(n):
-    r = random.randint()
-    result = r*n
+    r = random.random()
+    result = int(r*n)+1
     return result
 
 
@@ -17,6 +15,12 @@ def roll_dice(d,n):
         die = roll_one(n)
         total = total + die
         return total
+
+i = 0
+while i <20:
+    print(roll_one(20))
+    i = i+1
+
 
 
 
