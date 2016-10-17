@@ -15,7 +15,7 @@ import random,sys
 y = int(input("What is the maximum number? "))
 
 
-
+#checking
 
 b = y
 a = 1
