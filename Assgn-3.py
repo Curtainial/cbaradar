@@ -1,18 +1,6 @@
 import random,sys
 
 
-#location = 0
-#step =random.randint(0, 1) # returns 0 or 1, each with prob. 1/2
-#if step == 0:
-#    step = -1
-#    location = location + step
-#print (location)
-
-
-
-
-
-
 start = float((input("What is the starting number (1-499)? " )))
 while start < 1:
     start = float((input("What is the starting number (1-499)? " )))
@@ -38,44 +26,46 @@ walks = int(input("How many walks (1-1000)? "))
 while int(walks) <= 0 or int(walks) >= 1001:
     walks = int(input("How many walks (1-1000)? "))
 
-
-
-end = 0
-
 answer = True
 
 
 def randomwalk():
-
-
+    steps = 0
 
 
     while answer == True:
+        place = 0
+        while steps < 5000:
+
+            steps = steps + 1
 
 
-        if random.randint(1,99) <= right_percent:
+            if random.randint(1,100) >= right_percent:
 
-            steps = 1
-            end = start + steps
-            return end
+                place = steps + 1
+                return steps
 
-        else:
+            elif():
 
-            steps = -1
-            end = start + steps
-            return end
+                place = steps - 1
+                return steps
+
+    if steps == 5000:
+        fullwalks = 0
+        answer == False
+        return steps
+
+    elif place == min:
+        minwalks = 0
+        answer == False
+        return steps
+
+    elif place == max:
+        maxwalks = 0
+        answer == False
+        return steps
 
 
-        max_steps = 0
-        min_steps = 0
-
-        if end == start_max:
-            max_steps +=1
-            return max_steps
-
-        if end == start_min:
-            min_steps +=1
-            return min_steps
 
 
 
@@ -83,7 +73,7 @@ while walks != 0:
     print(randomwalk())
     walks = walks - 1
 
-
+print("Number of walks ")
 
 
 
