@@ -8,7 +8,7 @@ def filter_nonletters(message):
         if c.isalpha():
             output += c
     return output
-
+#This function removes every character that isn't in the 26 letter alphabet.
 
 def ask():
     choice = input("(E)ncrypt or (D)ecrypt?")
@@ -21,20 +21,15 @@ def ask():
     else:
         choice = input("(E)ncrypt or (D)ecrypt?")
         ask()
+#This function iterates if the incorrect inputs are provided, while also providing the means for encryption and decryption.
 
-
-
-
-
-
-
-
-def join_input_and_key(message, key):
+def join_input_and_key(message,key):
     pairs = []
     for i, c in enumerate(message):
 	    key_idx = i % len(key)
 	    pairs.append((c, key[key_idx]))
     return pairs
+#This function finds the new cipher shifted letter.
 
 def eightspace(message):
     output = ''
@@ -43,8 +38,9 @@ def eightspace(message):
         if (i + 1) % 8 == 0:
             output += ' '
     return output
+#This function creates agap every 8 spaces, as per Assignment guidelines.
 
-def encrypt(message, key):
+def encrypt(message,key):
     output = ''
     message = filter_nonletters(message.upper())
     key = filter_nonletters(key.upper())
